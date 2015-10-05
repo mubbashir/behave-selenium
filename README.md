@@ -16,8 +16,20 @@ CONTAINER ID        IMAGE                                COMMAND                
 ```
 
 * Selenium gird  console to have two nodes  http://192.168.99.100:4444/grid/console # if you are on mac or on windows get the ip of the running docker vm e.g. ```docker-machine ip default```
+* Get port of VNC if you want to connect to a node  
+```
+docker port <container-name|container-id> 5900
+docker port 34911106818f
+#=> 0.0.0.0:49338
+```
 * Clone the repo 
 * Create virtulenv ```$virtualenv env```
 * Activate the virtualenv and run the requirements file via pip ```source env/bin/activate; pip install -r requirements.txt``` 
 * Export GRID_HUB_URL  ```export GRID_HUB_URL='http://192.168.99.100:4444/wd/hub'```
 * Run ```behave --processes 2  --parallel-element feature``` 
+
+#### Refrence 
+* https://github.com/hugeinc/behave-parallel
+* https://github.com/behave/behave/ 
+* https://github.com/SeleniumHQ/docker-selenium 
+* https://github.com/SeleniumHQ/docker-selenium#debugging 
