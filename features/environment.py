@@ -1,6 +1,5 @@
-import os
-
 from selenium import webdriver
+import os
 
 GRID_HUB_URL = os.environ.get('GRID_HUB_URL')
 

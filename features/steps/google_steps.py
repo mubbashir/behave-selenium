@@ -1,8 +1,6 @@
-from behave import then
-from behave import when
+from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.ui import WebDriverWait
 
 
 @when('we visit google')
@@ -22,5 +20,5 @@ def step_impl(context, text):
 
 @then(u'it should have a title "{text}"')
 def step_impl(context, text):
-    print("" + text + " " + context.browser.title)
-    assert text in context.browser.title
+	print( "" + text +" "+ context.browser.title)
+	assert text in context.browser.title
